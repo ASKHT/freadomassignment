@@ -1,0 +1,58 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100vw;
+    z-index: 20;
+    font-family: "DM Sans";
+    
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    max-width: 90%;
+    max-height: 100%;
+    box-shadow: 0px 4px 30px 0px #ffffff40;
+}
+
+.close {
+    align-self: flex-end;
+     color:red;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        max-width: 90%; /* Full width on smaller screens */
+        max-height: 90%;
+        overflow-y: scroll;
+    }
+  .close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        color: red;
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+        cursor: pointer;
+        border: 2px solid red;
+        border-radius: 50%;
+        padding: 0.3rem; /* Adjust padding for better appearance */
+        background-color: white; /* Ensure contrast with background */
+        z-index: 1; /* Ensure the close button is above the modal content */
+    }
+}
